@@ -40,13 +40,13 @@ async function getbysearch(){
     const location=document.getElementById('location').value
     if(location==""){alert("Enter input Filed")}
     try {
-        const res=await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apikey}&units=metric`)
+        const res=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apikey}&units=metric`)
         const data=await res.json()
         if(data.cod==="400")
         {alert("Invalid Location")}
         else{
             console.log(data)
-            const imgres=await fetch(`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
+            const imgres=await fetch(`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
             const imgdata=await imgres.blob()
             domupdate(data,imgdata)
         }
@@ -63,13 +63,13 @@ async function getbyautodetect(position){
     const lat = position.coords.latitude.toFixed(2)
     const long = position.coords.longitude.toFixed(2)
     try {
-        const res=await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apikey}&units=metric`)
+        const res=await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apikey}&units=metric`)
         const data=await res.json()
         if(data.cod==="400")
         {alert("Invalid Location")}
         else{
             console.log(data)
-            const imgres=await fetch(`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
+            const imgres=await fetch(`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
             const imgdata=await imgres.blob()
             domupdate(data,imgdata)
         }
