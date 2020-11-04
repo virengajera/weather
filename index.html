@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Weather Application that gives current Weather information based on your location">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="./images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <title>weather App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="top">
+                <label for="">Enter Location:</label>
+                <input type="text" placeholder="Enter location here" id="location">
+                <button id="search">Search</button>
+                <button id="auto_detect">Auto Detect Location</button>
+            </div>
+            <div class="info">
+                <div class="top-info sub-card">
+                    <h2 id="location2">Surat</h2>
+                    <h2 id="date">28/5/20</h2>
+                </div>
+                <div class="description sub-card">
+                    <img src="./images/i.png" alt="Image of weather" class="img-description" id="img-description">
+                    <h2 id="description">Description:</h2>
+                </div>
+                <div class="temperature sub-card">
+                    <img src="./images/temperature.png" alt="">
+                    <h2 id="maintemp">Temp:</h2>
+                    <h2 id="feellike">Feels like:</h2>
+                </div>
+                <div class="humidity sub-card">
+                    <img src="./images/humidity.png" alt="">
+                    <h2 id="humidity">Humidity: </h2>
+                </div>
+                <div class="pressure sub-card">
+                    <img src="./images/pressure.png" alt="">
+                    <h2 id="pressure">Pressure: </h2>
+                </div>
+                <div class="wind sub-card">
+                    <img src="./images/wind.png" alt="">
+                    <h2 id="wind">Wind:</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
