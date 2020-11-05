@@ -22,7 +22,6 @@ const wind=document.getElementById('wind')
 search_btn.addEventListener('click',getbysearch)
 
 function domupdate(data,imgdata){
-    console.log(data,imgdata)
     location2.innerText=data.name
     const dt=new Date(1604490871*1000)
     date.innerText=`${dt.getDate()} ${months[dt.getMonth()]},${dt.getUTCFullYear()}`
