@@ -45,7 +45,6 @@ async function getbysearch(){
         if(data.cod==="400")
         {alert("Invalid Location")}
         else{
-            console.log(data)
             const imgres=await fetch(`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
             const imgdata=await imgres.blob()
             domupdate(data,imgdata)
@@ -68,7 +67,6 @@ async function getbyautodetect(position){
         if(data.cod==="400")
         {alert("Invalid Location")}
         else{
-            console.log(data)
             const imgres=await fetch(`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
             const imgdata=await imgres.blob()
             domupdate(data,imgdata)
