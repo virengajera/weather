@@ -23,7 +23,7 @@ search_btn.addEventListener('click',getbysearch)
 
 function domupdate(data,imgdata){
     location2.innerText=data.name
-    const dt=new Date(1604490871*1000)
+    const dt=new Date()
     date.innerText=`${dt.getDate()} ${months[dt.getMonth()]},${dt.getUTCFullYear()}`
     imgdescription.src=URL.createObjectURL(imgdata);
     description.innerText=`${data.weather[0].description}`;
